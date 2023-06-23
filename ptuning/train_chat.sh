@@ -1,7 +1,7 @@
 CUDA_VISIBLE_DEVICES=0 python3 main.py \
     --do_train \
-    --train_file /home/aurobit/llm/data/chatglm-6b/train.json \
-    --validation_file /home/aurobit/llm/data/chatglm-6b/dev.json \
+    --train_file /home/aurobit/llm/data/chatglm-6b/20k/train.json \
+    --validation_file /home/aurobit/llm/data/chatglm-6b/20k/dev.json \
     --prompt_column prompt \
     --response_column response \
     --history_column history \
