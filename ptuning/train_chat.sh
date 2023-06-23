@@ -1,7 +1,7 @@
 CUDA_VISIBLE_DEVICES=0 python3 main.py \
     --do_train \
-    --train_file /home/aurobit/llm/data/chatglm-6b/20k/train.json \
-    --validation_file /home/aurobit/llm/data/chatglm-6b/20k/dev.json \
+    --train_file /home/aurobit/llm/data/chatglm-6b/train.json \
+    --validation_file /home/aurobit/llm/data/chatglm-6b/dev.json \
     --prompt_column prompt \
     --response_column response \
     --history_column history \
@@ -9,10 +9,10 @@ CUDA_VISIBLE_DEVICES=0 python3 main.py \
     --model_name_or_path /home/aurobit/llm/model/chatglm-6b \
     --output_dir output \
     --overwrite_output_dir \
-    --max_source_length 2048 \
-    --max_target_length 256 \
-    --per_device_train_batch_size 4 \
-    --per_device_eval_batch_size 4 \
+    --max_source_length 1024 \
+    --max_target_length 128 \
+    --per_device_train_batch_size 2 \
+    --per_device_eval_batch_size 2 \
     --gradient_accumulation_steps 16 \
     --predict_with_generate \
     --max_steps 30000 \
