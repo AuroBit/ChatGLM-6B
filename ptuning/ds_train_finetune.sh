@@ -24,5 +24,5 @@ deepspeed --num_gpus=1 --master_port $MASTER_PORT main.py \
     --logging_steps 10 \
     --save_steps 1000 \
     --learning_rate $LR \
-    --quantization_bit 8
+    --fp16
 
