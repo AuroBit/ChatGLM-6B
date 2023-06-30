@@ -132,7 +132,8 @@ def main():
         model.transformer.prefix_encoder.float()
     else:
         # Finetune
-        model = model.float()
+        # model = model.float()
+        model = model.half()
 
     prefix = data_args.source_prefix if data_args.source_prefix is not None else ""
 
